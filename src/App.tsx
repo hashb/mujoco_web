@@ -8,15 +8,14 @@ import "./index.css";
 import { DepthOfField, EffectComposer } from "@react-three/postprocessing";
 const App = () => {
   return (
-    <div className="w-full h-full border-4 border-blue-500">
+    <div className="w-full h-full">
       <Canvas
         shadows="soft"
         dpr={window.devicePixelRatio}
         style={{
           borderRadius: "inherit",
-          margin: "0 auto", // Center horizontally.
-          width: 800,
-          height: 600
+          width: window.innerWidth,
+          height: window.innerHeight
         }}
         onCreated={(state) => {
           state.scene.background = new THREE.Color(0x264059);

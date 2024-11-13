@@ -625,5 +625,5 @@ export const updateThreeScene = (
         spheres.instanceMatrix.needsUpdate = true;
     }
 
-    simulation.step();
+    simulation.kinematics();
 };

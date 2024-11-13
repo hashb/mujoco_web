@@ -27,7 +27,13 @@ These projects provided foundational insights and methodologies that have been a
 Before proceeding with the build process, ensure you have the [Emscripten](https://emscripten.org/index.html) compiler installed and the EMSDK environment variable set.
 
 ```bash
+git clone https://github.com/kineticsystem/mujoco_web.git
 git clone https://github.com/emscripten-core/emsdk.git
+
+docker run --rm -v `pwd`:/mujocowasm -it ubuntu:22.04 bash
+apt update
+apt install -y git cmake python3-pip 
+
 cd emsdk/
 git pull
 ./emsdk install latest
